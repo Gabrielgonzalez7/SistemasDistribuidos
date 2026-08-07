@@ -1,0 +1,50 @@
+                        ** Aula dia 07/08/2026, Semana 2 **
+
+      Revisão Arquiteturas:
+** Arquiterura Cliente-Servidos:
+  -Modelo centralizado
+  -Os clientes são maquinas que solicitam serviços ou recursos dos servidores
+  -Servidores fazem o gerenciamneto, controle e atendimento dos requisições dos clientes
+
+*Caracteristas cliente-servidos
+  -Centralização: Servidores tem um papel chave
+  -Dependência: Se o servidor ficar indisponivel, clientes perdem acesso
+  -Gerenciamento: Fácil controle e administração
+
+**Arquitetura Ponto-a-Ponto
+  -Modelo Descentralizado = Atuam tanto como clientes quanto servidos
+  -Solicitar e fornecer recursos diretamente para outros nós, sem precisar de servidor centra.
+  - Comunicação direta em pares
+
+**Caracteristicas Ponto-a-Ponto
+  -Desncetralização
+  -Escabilidade
+  -Resiliência
+
+
+                                    *** Comunicação e Sincronismo em Sistemas Distribuidos ***
+
+  1) Comunicação entre máquinas: 
+      -> Memória compartilhada -> Transposte usando protocolos de rede(TCP/IP, UDP)
+      -> Sincronização: Mecanismo utilizado para coordenar ações, ainda que as máquinas estejam separadas e se comuniquem via rede.
+                -Sincronismo temporal(Relógios sincronizados para ordernar eventos)
+                -Sincronimos de ações
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
