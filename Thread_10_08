@@ -1,0 +1,48 @@
+          *** Thread **
+--> Para programação concorrente
+
+Difenreça entre thread de memoria compartilhada e sem memoria compartilhada
+Memoria compartilhada: Deve-se usar o conceito de sincronização(tempo e bloqueio)(semaforo, Lock), interface Runnable.
+Sem memória compartilhada: refere-se na verdade a processos separados, ou a modelos de computação distribuída onde tarefas usam memória isolada e trocam mensagens
+
+
+Uso das Threads em Java, Python e C++:
+
+      Java:
+  -> Paralelismo : Real e massivo
+  -> Gerenciamneto de memória:Garbage Collector da JVM, mas ainda precisa usar blocos synchronized ou pacotes de concorrência avançados (java.util.concurrent) para blindar os dados compartilhados
+
+
+    Python:
+  -> Paralelismo: Limitado
+  -> Evolução Moderna
+
+    C++:
+  ->Paralelismo: Real e completo para qualquer tipo de tarefa.
+  -> Gerenciamento de memória: Totalmente manual. Uso de mutex, semáforos.
+
+
+            ***  Identificando Thread  ***
+Mesmo sem usar memória compartilhada, ainda é possivel identificar e monitorar qual thread está sendo executada
+-> Id da Thread
+-> Nome da Thread
+
+***** Em Java, cada thread tem métodos para obter ID e nome: *****
+ Thread t = Thread.currentThread();
+        System.out.println("Executando na Thread: " + t.getName() + " | ID: " + t.getId());
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
