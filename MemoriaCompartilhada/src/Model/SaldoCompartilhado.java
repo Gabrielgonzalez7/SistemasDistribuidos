@@ -3,12 +3,12 @@ package Model;
  * Representa o saldo central compartilhado entre as diferentes threads
  * responsáveis pelo processamento das vendas dos caixas.
  *
- * <p>A classe utiliza o modificador {@code synchronized} nos métodos
+ *  classe utiliza o modificador {@code synchronized} nos métodos
  * que acessam o saldo para garantir que apenas uma thread por vez
- * possa realizar uma operação sobre o recurso compartilhado.</p>
+ * possa realizar uma operação sobre o recurso compartilhado.
  *
- * <p>Essa sincronização evita condições de corrida (race conditions),
- * garantindo a consistência do saldo durante a execução concorrente.</p>
+ * Essa sincronização evita condições de corrida (race conditions),
+ * garantindo a consistência do saldo durante a execução concorrente.
  *
  */
 public class SaldoCompartilhado {
