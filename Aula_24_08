@@ -7,5 +7,6 @@
 ->Relógio
   ->Fisícos
   ->Lógicos
--> Eleição
+
 ->Exclusão Mútua
+      ->Lock, relógios ou eleição
