@@ -1,0 +1,74 @@
+      Thread
+->Sincronização
+      -> Java : Lock, Sincronyzed
+      -> Python: Lock
+      C# -Lock
+ 
+ 
+                                                      Relógios
+
+->Fisícos: Representa o tempo real de um computador, cada máquina possui o seu. Normalmente, baseado em um oscilador de hardware.
+      Com o passar do tempo, pode surgir uma diferença entre eles, chamada de desvio de relógio(clock drift).
+            Sistemas distribuidos utilizam mecanismos de sincronização de relógios: 
+                  ->Algoritmo de Cristian
+                  -> Algoritmo de Berkeley
+                  -> NTP(Network Time Protocol)
+                  -> PTP(Precision Time Protocol)
+                        O objetivo é reduzir a diferença entre os relógios e máquinas.
+
+  ->Lógicos: O objetivo principal é determinar a ordem dos acontecimentos em um sistema distribuido
+                        ->Lampert introduziu Uma forma de ordenar eventos utilizando a relação chamada Happens-before
+                        Regras básicas do relógio de Lamport:
+                  Antes de cada evento, o processo incrementa seu relógio.
+                  Ao enviar uma mensagem, o processo envia junto o valor do relógio.
+                   Ao receber uma mensagem, o processo compara seu relógio com o valor recebido e atualiza o contador.
+Assim, é possível estabelecer uma ordem lógica entre eventos.
+
+----------------------------------------------------------------------------------
+| Relógio físico                            | Relógio lógico                     |
+| ----------------------------------------- | ---------------------------------- |
+| Representa o tempo real                   | Representa a ordem dos eventos     |
+| Utiliza relógio do computador             | Utiliza contador                   |
+| Pode apresentar diferenças entre máquinas | Não depende de horário real        |
+| Pode ser sincronizado usando NTP/PTP      | Pode utilizar algoritmo de Lamport |
+| Exemplo: 15:30:10                         | Exemplo: evento 25                 |
+----------------------------------------------------------------------------------
+
+->Exclusão Mútua : A exclusão mútua é utilizada quando vários processos precisam acessar um mesmo recurso, 
+mas somente um deles pode utilizá-lo por vez. Este recurso é chamda de SEÇÃO CRTICA.
+
+Eleição: O problema de eleição acontece quando um sistema distruibudo precisa escolher o processo para exercer o papel de coordenardor ou líder.
+                              O processo eleito pode ser responsável por:
+                        -> Coordenar determinadas operações;
+                        -> Gerenciar recursos;
+                        -> Tomar decisões;
+                        -> Organizar a comunicação;
+                        -> Coordenar outros processos.
+
+-> Poll de Threads
+      Uma Thread Poll é um conjunto de threads criadas antecipadamente ou reutilizadas para executar várias tarefas.
+            Ao inves de criar uma nova thread para cada tarefa, utiliza-se um conjunto limitado.
+Assim, as tarefas que não podem ser executadas imediatamente ficam aguardando em uma fila(colocar trabalho de MemoriaCompartilhada de exemplo)
+Vantagens do Thread Pool
+
+                              As principais vantagens são:
+
+      Reutilização
+-:As threads podem executar várias tarefas, evitando a criação de uma nova thread para cada tarefa.
+
+      Controle de recursos
+->É possível limitar a quantidade de threads executando simultaneamente.
+
+      Melhor desempenho
+->A criação e destruição constante de threads gera um custo. O Thread Pool reduz esse custo reutilizando threads.
+
+      Fila de tarefas
+-> Quando todas as threads estão ocupadas, novas tarefas podem aguardar em uma fila.
+
+
+Resumo: 
+-> Os relógios físicos ajudam a trabalhar com o tempo real e sincronização.
+-> Os relógios lógicos ajudam a determinar a ordem dos eventos.
+-> A exclusão mútua impede que processos acessem simultaneamente um recurso que precisa ser utilizado por apenas um deles.
+-> A eleição permite escolher um coordenador entre os processos.
+O Thread Pool controla e reutiliza threads para executar tarefas de maneira mais eficiente
