@@ -1,0 +1,9 @@
+      ** exercicio ** 
+//Problema da telefonia
+-> Cliente -> vai mandar o celular
+->Servidor = vai ter a base, hashmap. Vai devolver dados da sessao
+    -> Carregar um arquivo e coloca tudo num hashmap
+
+      *** Visualizar o que foi feito localmente 
+
+-> Fazer em RMI
