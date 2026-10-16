@@ -1,9 +1,18 @@
       ** exercicio ** 
 //Problema da telefonia
+
 -> Cliente -> vai mandar o celular
+
 ->Servidor = vai ter a base, hashmap. Vai devolver dados da sessao
     -> Carregar um arquivo e coloca tudo num hashmap
 
-      *** Visualizar o que foi feito localmente 
+     ** Onde estao os arquivos:
+-> repositorio pesquisa_ordenacao
+-> https://github.com/alexandrezamberlan/pesquisa_ordenacao/tree/master/__aulaPratica/Telefonia
+-> https://github.com/alexandrezamberlan/pesquisa_ordenacao/blob/master/05-hash/problemaSessaoTelefonia/telephony_sessions.txt
+
+
+      *** Visualizar o que foi feito localmente : 
+>Colocar em um serviso distribuido
 -> Manter modelo MVC
 -> Fazer em RMI
